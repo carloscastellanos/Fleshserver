@@ -1,0 +1,33 @@
+;
+; Initial Control DEFINITIONS 
+;
+
+;$Devicename sets the name or description of the device
+$Devicename "Carlos Castellanos"
+
+;$DHCP on sets SitePlayer to find its IP address from a DHCP server
+$DHCP on
+
+;$DownloadPassword sets password for downloading web pages and firmware
+$DownloadPassword ""
+
+;$SitePassword sets password for browsing web pages
+$SitePassword ""
+
+;$InitialIP sets SitePlayer's IP address to use if no DHCP server is available
+$InitialIP "130.65.114.9"	
+
+;$Sitefile sets the binary image filename that will be created
+$Sitefile "C:\Program Files\SitePlayer\Flesh.spb"
+
+;$Sitepath sets the root path of the web pages for this project
+$Sitepath "C:\Program Files\SitePlayer\SP_ROOT"
+
+;$Include sets the name of a file to include during make process
+ $Include "C:\Program Files\Siteplayer\pcadef.inc" 
+
+;
+; Control OBJECTS
+;
+org 0FF1Ah
+baudrate dw 65015		; set baud rate to 9600

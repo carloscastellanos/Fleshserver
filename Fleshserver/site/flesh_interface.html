@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="iso-8859-1"?><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" /><script type="text/javascript" src="http://ccastellanos.com/projects/fleshserver/fleshserver/fleship.php"></script><script type="text/javascript" src="flesh.js"></script><link href="template_css.css" rel="stylesheet" type="text/css" /><title>Fleshserver - Carlos Castellanos</title></head>
+<body style="background-color:white;" onLoad="getFlesh();"><form name="fsform"><SCRIPT LANGUAGE="JavaScript">
+// ip is the variable from the fleship.php script
+document.write('<input type="hidden" name="clientip" value="' + ip + '" />');
+</SCRIPT></form><SCRIPT LANGUAGE="JavaScript">
+function submitMe(io) {
+ipaddr = document.fsform.clientip.value; var status = ^io4;
+var newstatus = status;
+if(status == 0) {
+	newstatus = 1;
+} else {
+	newstatus = 0;
+}
+loc = "fs.spi?com=<message>|"+newstatus+"|"+ipaddr+"|</message>&io"+io+"="+newstatus;
+document.location = loc;
+}
+</SCRIPT>
+<a href="javascript:submitMe(4);"><img src="img/flesh_a^io4.jpg" border="0" width="80" height="80" alt="flesh" onmouseover="self.status='Stimulate specimen'; return true;" onmouseout="self.status=''; return true" /></a><br /><div id="flesh"></div>
+</body></html>
